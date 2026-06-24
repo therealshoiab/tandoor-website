@@ -15,30 +15,34 @@ Welcome to your brand new, premium restaurant website! Below you will find all t
 ## 📦 Pages and Features Delivered
 
 1.  **Homepage (`/`)**
-    *   **Navbar:** Sticky design with glassmorphism, transparent on top shifting to solid on scroll. Hamburger menu for mobile and a highlighted CTA button for table reservation.
-    *   **Hero Section:** Full-viewport-height cover with dark overlay, atmospheric saffron and deep maroon gradients, animated tagline ("Authentic Mughlai & Charcoal Grilled Masterpieces"), and rating badges (Zomato: 4.2★, Google: 4.6★).
+    *   **Navbar & Theme Toggle:** Sticky design with glassmorphism, transparent on top shifting to solid on scroll. Includes a **responsive Light/Dark Mode toggle** that dynamically updates the global styling theme and persists user selection via browser `localStorage`.
+    *   **Hero Section:** Full-viewport-height cover with dark overlay, atmospheric saffron and deep maroon gradients, animated tagline ("Where Tradition Meets Modern Gastronomy"), and rating badges (**Google: 4.6★**, **Zomato: 4.2★**, and **Swiggy: 4.6★**).
     *   **Highlights Section:** Quick cards showcasing slow-cooked curries, authentic clay ovens, central location, and top-rated delivery.
     *   **Chef's Specialties:** Interactive carousel displaying signature dishes like Mutton Rogan Josh and Special Tandoori Karachi Tikka.
-    *   **Testimonials & Reviews:** Real verified customer quotes with visual rating stars.
+    *   **Testimonials & Reviews:** An **infinite-scrolling marquee animation** showing guest quotes with visual rating stars that seamlessly moves across the screen and pauses on mouse hover.
+    *   **Instagram Video Reels Grid:** Replaced static social images with **6 auto-playing, silent, looping gourmet cooking/food videos** embedded directly from the official Instagram Reels feed.
 2.  **Menu Page (`/menu`)**
     *   Category tabs for Platters, Meals for One, Soups, Starters, Main Course, Breads, Rice and Biryani, Momos, and Desserts & Beverages.
     *   Filters for Veg / Non-Veg / All options.
     *   Real-time search bar to search for dishes instantly.
-    *   Custom food cards with price, dietary indicators, description, and highlights (e.g. "Bestseller", "Must-try").
+    *   Custom food cards with price, dietary indicators, description, and highlights.
+    *   **Dynamic Food Images:** Every single dish (70+ items) features a high-quality, appetite-inducing food photograph mapped dynamically based on the dish name and category keywords.
 3.  **About Us Page (`/about`)**
     *   Detailed history and story of Tandoor Srinagar.
     *   "Our Philosophy" and "Ambiance Description" showcasing the rustic wood aesthetics, warm amber lighting, and charcoal tandoor setup.
 4.  **Gallery Page (`/gallery`)**
-    *   Masonry grid showcasing high-quality photos of signature dishes and the restaurant ambiance.
+    *   Masonry grid showcasing high-quality photos of signature dishes and the restaurant ambiance extracted from the Instagram feed.
+    *   Includes a safe image loading component that automatically falls back to curated Unsplash food pictures if Instagram links expire.
     *   Hover overlays with dish details and category filters.
 5.  **Reservations Page (`/reservations`)**
     *   Accessible table booking form with Date, Time, Number of Guests, Full Name, Email, and Phone.
     *   Fully integrated with local storage or form handling triggers.
 6.  **Offers Page (`/offers`)**
-    *   Visually appealing cards detailing active coupons, discounts (e.g., "TANDOOR10"), and happy hours.
+    *   Visually appealing cards detailing active coupons, discounts (e.g., "TANDOOR10"), and happy hours. (Note: The "Join the Tandoor Club" email subscription form has been removed to keep focus on direct bookings/offers).
 7.  **Contact Page (`/contact`)**
     *   Embedded Google Map area showing the exact coordinates in Lal Chowk.
     *   Information cards detailing Opening Hours, Address, and Direct Booking.
+    *   **Real Brand Social Icons:** Redesigned Facebook, Instagram, Zomato, and Swiggy buttons that look exactly like the real app buttons (e.g. radial gradient for Instagram, brand blue for Facebook).
 8.  **Global Additions**
     *   **WhatsApp FAB:** A floating button visible on all pages that allows customers to chat directly with the restaurant.
     *   **Back to Top Button:** Smooth scroll-to-top button appearing after scrolling down.
