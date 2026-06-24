@@ -20,7 +20,7 @@ Welcome to your brand new, premium restaurant website! Below you will find all t
     *   **Highlights Section:** Quick cards showcasing slow-cooked curries, authentic clay ovens, central location, and top-rated delivery.
     *   **Chef's Specialties:** Interactive carousel displaying signature dishes like Mutton Rogan Josh and Special Tandoori Karachi Tikka.
     *   **Testimonials & Reviews:** An **infinite-scrolling marquee animation** showing guest quotes with visual rating stars that seamlessly moves across the screen and pauses on mouse hover.
-    *   **Instagram Video Reels Grid:** Replaced static social images with **6 auto-playing, silent, looping gourmet cooking/food videos** embedded directly from the official Instagram Reels feed.
+    *   **Instagram Video Reels Grid:** Replaced static placeholder boxes with **6 interactive, live, official Instagram embeds** showing real videos and posts directly on the homepage.
 2.  **Menu Page (`/menu`)**
     *   Category tabs for Platters, Meals for One, Soups, Starters, Main Course, Breads, Rice and Biryani, Momos, and Desserts & Beverages.
     *   Filters for Veg / Non-Veg / All options.
@@ -31,8 +31,8 @@ Welcome to your brand new, premium restaurant website! Below you will find all t
     *   Detailed history and story of Tandoor Srinagar.
     *   "Our Philosophy" and "Ambiance Description" showcasing the rustic wood aesthetics, warm amber lighting, and charcoal tandoor setup.
 4.  **Gallery Page (`/gallery`)**
-    *   Masonry grid showcasing high-quality photos of signature dishes and the restaurant ambiance extracted from the Instagram feed.
-    *   Includes a safe image loading component that automatically falls back to curated Unsplash food pictures if Instagram links expire.
+    *   Masonry grid showcasing **37 live Instagram posts and resolved Google Maps photo URLs** as preview thumbnails.
+    *   Includes a **custom interactive lightbox modal** that renders the official Instagram iframe embed directly inside the card when clicked, allowing users to play reels and view descriptions dynamically.
     *   Hover overlays with dish details and category filters.
 5.  **Reservations Page (`/reservations`)**
     *   Accessible table booking form with Date, Time, Number of Guests, Full Name, Email, and Phone.
