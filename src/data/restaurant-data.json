@@ -1,0 +1,676 @@
+{
+  "restaurant": {
+    "name": "Tandoor",
+    "tagline": "Authentic Mughlai & Charcoal Grilled Masterpieces",
+    "cuisines": ["North Indian", "Mughlai", "Chinese", "Biryani", "Kashmiri"],
+    "specialty_dishes": [
+      "Mutton Rogan Josh",
+      "Mughlai Chicken",
+      "Kashmiri Mutton Pulao",
+      "Special Tandoori Karachi Tikka",
+      "Chicken Dum Biryani"
+    ],
+    "address": {
+      "street": "Near Old Palladium Cinema",
+      "area": "Lal Chowk",
+      "city": "Srinagar",
+      "state": "Jammu and Kashmir",
+      "pincode": "190001",
+      "landmark": "Old Palladium Cinema"
+    },
+    "opening_hours": {
+      "Monday": "12:00 PM – 10:30 PM",
+      "Tuesday": "12:00 PM – 10:30 PM",
+      "Wednesday": "12:00 PM – 10:30 PM",
+      "Thursday": "12:00 PM – 10:30 PM",
+      "Friday": "12:00 PM – 10:30 PM",
+      "Saturday": "12:00 PM – 10:30 PM",
+      "Sunday": "12:00 PM – 10:30 PM"
+    },
+    "ratings": {
+      "zomato": {
+        "delivery_rating": 4.2,
+        "delivery_rating_count": 5849,
+        "dining_rating": 4.1,
+        "dining_rating_count": 13
+      },
+      "google_maps": {
+        "rating": 4.6,
+        "rating_count": 1350
+      }
+    },
+    "cost_for_two": {
+      "average": 1050,
+      "currency": "₹"
+    },
+    "amenities": [
+      "Air Conditioning (AC)",
+      "Premium Indoor Seating",
+      "Takeaway & Delivery Options",
+      "Digital & Card Payments Accepted",
+      "Family-Friendly Environment",
+      "Valet Parking Assistance (nearby)"
+    ],
+    "customer_reviews": [
+      {
+        "quote": "They serve amazing quality food at low price. They also have a wide range of veg and non-veg options so there is something for everyone.",
+        "rating": 5,
+        "platform": "Google"
+      },
+      {
+        "quote": "Great place, awesome food. Kashmiri Pulao and Mughlai Chicken was authentic and too much for our taste buds… we will come back again.",
+        "rating": 5,
+        "platform": "Google"
+      },
+      {
+        "quote": "It was an awesome experience here. The food was really nice including the nature of the staff. From the entry to the exit, everything was soothing for us.",
+        "rating": 5,
+        "platform": "Google"
+      },
+      {
+        "quote": "Great place to have a delicious Wazwan and North Indian food. Located pretty much in the center of happenings, it’s ideal for a family meal.",
+        "rating": 5,
+        "platform": "Zomato"
+      },
+      {
+        "quote": "Fantastic place, nice ambience, plenty of seating. The service is equally good, and the food taste covers for any minor delays during rush hours.",
+        "rating": 4,
+        "platform": "Zomato"
+      },
+      {
+        "quote": "Excellent veg selection too. We tried the paneer tikka masala, tawa veg, tadka daal, and laccha parantha. Highly recommended!",
+        "rating": 5,
+        "platform": "Google"
+      }
+    ],
+    "highlights": [
+      "Famed for slow-cooked authentic Mughlai curries and cashew-based gravies",
+      "Authentic clay oven (tandoor) firing up daily with natural wood charcoal",
+      "Centrally situated in Lal Chowk near the historic Palladium Cinema, Srinagar",
+      "One of Srinagar's top-rated Mughlai delivery hubs with a 4.2 star rating and 5,800+ reviews"
+    ],
+    "ambiance_description": "Tandoor offers a warm, inviting casual dining environment with rustic wood aesthetics, warm amber lighting, and comfortable seating arrangement. Perfect for families and food enthusiasts, the restaurant's atmosphere is animated by the delicious aroma of tandoor specials freshly cooked in traditional charcoal clay ovens.",
+    "social_media": {
+      "instagram": "https://www.instagram.com/tandoor.lalchowk?igsh=MTA1ZDRuMHJpb3N4cg%3D%3D",
+      "facebook": "https://www.facebook.com/tandoor.lalchowk",
+      "phone": "+919622894984",
+      "whatsapp": "+917780938743"
+    },
+    "ordering_links": {
+      "zomato": "https://www.zomato.com/srinagar/tandoor-lal-chowk/order",
+      "swiggy": "https://www.swiggy.com/city/srinagar/tandoor-lal-chowk-rest689874"
+    },
+    "menu": [
+      {
+        "category": "Platters",
+        "items": [
+          {
+            "name": "Chicken Biryani Platter",
+            "price": 490,
+            "description": "A delicious platter combining aromatic Chicken Biryani, 3 pieces of succulent Chicken Tikka, and 3 pieces of rich Chicken Malai Tikka.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Mutton Pulao Platter",
+            "price": 590,
+            "description": "Authentic Mutton Pulao served alongside half a portion of tender Mutton Kebab and spicy Kashmiri Chicken Kanti.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Tandoori Chicken Platter",
+            "price": 450,
+            "description": "For tandoor lovers: features 2 pieces of classic smoky Tandoori Chicken and 2 pieces of creamy Afghani Chicken.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          }
+        ]
+      },
+      {
+        "category": "Meals For One",
+        "items": [
+          {
+            "name": "Butter Chicken [2 Pieces] With 2 Butter Naan",
+            "price": 320,
+            "description": "Succulent chicken pieces cooked in a creamy tomato gravy, served with 2 hot, flaky butter naans.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Changezi Chicken [2 Pieces] With 2 Butter Naan",
+            "price": 320,
+            "description": "Fiery and flavor-packed Changezi chicken served with 2 butter naans for a complete satisfying meal.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Changezi Paneer With 2 Butter Naan",
+            "price": 290,
+            "description": "Soft paneer cubes simmered in a spiced Changezi style gravy, served with 2 buttery flatbreads.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Dal Makhani With 2 Butter Naan",
+            "price": 240,
+            "description": "Slow-cooked black lentils in rich butter and cream, served hot with 2 fresh butter naans.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Must-try"
+          }
+        ]
+      },
+      {
+        "category": "Soups",
+        "items": [
+          {
+            "name": "Chicken Daniya Shorba",
+            "price": 160,
+            "description": "A light and soothing coriander-infused chicken broth packed with traditional spices.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Chicken Manchow Soup",
+            "price": 160,
+            "description": "Indo-Chinese classic soup with shredded chicken, crunchy vegetables, and a crispy noodle topping.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Chicken Manchurian Soup",
+            "price": 160,
+            "description": "Tangy and savory broth infused with garlic, ginger, soy sauce, and tender chicken bites.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Cream Of Chicken Soup",
+            "price": 180,
+            "description": "Velvety, rich, and smooth cream soup loaded with shredded chicken breast and mild spices.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Cream Of Mushroom Soup",
+            "price": 170,
+            "description": "Earthy, rich cream soup prepared with freshly sliced forest mushrooms and fresh herbs.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Dal Dhaniya Shorba",
+            "price": 140,
+            "description": "Lentil soup infused with fresh coriander leaves, cumin, and a splash of lemon juice.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Hot And Sour Chicken Soup",
+            "price": 160,
+            "description": "Boldly spiced sour and hot soup with chicken flakes, eggs, mushrooms, and bamboo shoots.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Hot And Sour Veg Soup",
+            "price": 140,
+            "description": "Tangy, spicy vegetable broth packed with oriental flavors, tofu, and assorted veggies.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Mutton Dhaniya Shorba",
+            "price": 190,
+            "description": "A robust, slow-simmered mutton bone broth heavily scented with fresh coriander spices.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Sweet Corn Chicken Soup",
+            "price": 160,
+            "description": "Mild and sweet soup filled with tender chicken bits, creamed sweet corn, and egg drops.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Sweet Corn Veg Soup",
+            "price": 140,
+            "description": "Warm, comforting soup loaded with sweet golden corn kernels and finely chopped spring vegetables.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Tomato Soup",
+            "price": 130,
+            "description": "Classic tangy tomato soup garnished with cream and served with crispy bread croutons.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Veg Manchow Soup",
+            "price": 140,
+            "description": "Spicy, garlic-rich soup with minced vegetables, soy sauce, and a crispy noodle garnish.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          }
+        ]
+      },
+      {
+        "category": "Starters",
+        "items": [
+          {
+            "name": "Chilli Mushroom",
+            "price": 250,
+            "description": "A fusion of fresh mushrooms, crisp bell peppers and onions tossed in Indo-Chinese sauces.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Chilli Paneer Dry",
+            "price": 260,
+            "description": "Cottage cheese cubes tossed with bell peppers, green chillies, and soy sauce in a dry wok.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Honey Chilli Potato",
+            "price": 210,
+            "description": "Crispy fried potatoes glazed with sweet honey and spicy red chilli sauce, sprinkled with sesame.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Mushroom Malai Tikka",
+            "price": 260,
+            "description": "Fresh mushrooms marinated in a luxurious mixture of cream, cheese, and yogurt, grilled to perfection.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Mushroom Tikka",
+            "price": 240,
+            "description": "Whole mushrooms marinated in spicy yogurt, cooked to a smoky finish in our clay oven.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Paneer Malai Tikka",
+            "price": 280,
+            "description": "Creamy paneer cubes coated in rich cream, cheese, and mild spices, grilled in a charcoal tandoor.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Paneer Tikka",
+            "price": 260,
+            "description": "Succulent cubes of paneer marinated in yogurt and tandoori spices, skewered with onions and peppers.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Veg Manchurian Dry",
+            "price": 220,
+            "description": "Fried vegetable balls tossed in a tangy, garlic-rich Manchurian sauce glaze.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Boneless Chicken Kebab Kanti",
+            "price": 320,
+            "description": "Spiced chicken cubes shallow-fried with fresh capsicum, green chillies, and sliced onions.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Boneless Mutton Kebab Kanti",
+            "price": 450,
+            "description": "Tender boneless mutton pieces sautéed with onions and local spices for a classic Kashmiri bite.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Chicken 65",
+            "price": 310,
+            "description": "Deep-fried spicy chicken bites seasoned with curry leaves, red chillies, and local spices.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Chicken Malai Tikka",
+            "price": 320,
+            "description": "Chicken pieces delicately marinated in cream, yogurt, and aromatic spices, roasted to melt-in-mouth texture.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Chicken Manchurian Dry",
+            "price": 290,
+            "description": "Wok-fried chicken nuggets coated in ginger, garlic, soy, and spring onion glaze.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Chicken Seekh Kebab",
+            "price": 280,
+            "description": "Succulent minced chicken blended with aromatic spices and herbs, skewered and grilled.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Chicken Tikka",
+            "price": 310,
+            "description": "A harmonious blend of marinated chicken in classic tandoori yogurt marinade, grilled on open coals.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Chilli Chicken Dry",
+            "price": 300,
+            "description": "Stir-fried chicken tossed with dark soy sauce, bell peppers, onions, and green chillies.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Garlic Chicken Dry",
+            "price": 310,
+            "description": "Crispy chicken nuggets heavily tossed with fresh garlic flakes, pepper, and spring onions.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Mutton Seekh Kebab",
+            "price": 390,
+            "description": "Richly spiced minced mutton blended with herbs, skewered and roasted to perfection in clay oven.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Special Tandoori Chicken",
+            "price": 350,
+            "description": "Traditional chicken marinated overnight in classic spices and slow-roasted in charcoal oven.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Special Tandoori Karachi Tikka",
+            "price": 360,
+            "description": "Mouthwatering cheese-loaded tikka finished in a pan with butter and three types of cheese.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Special Tandoori Peshawari Chicken Tikka",
+            "price": 360,
+            "description": "Chicken pieces bathed in a ginger-chilli-coriander yogurt base, grilled in Pesahwari style.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Tandoor Special Platter",
+            "price": 690,
+            "description": "Assorted platter of Tandoori, Afghani, Malai Tikka, Paneer, Mushroom, Seekh Kebab, and 2 Mojitos.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Tandoori Afghani Chicken",
+            "price": 350,
+            "description": "Rich and mild chicken marinated in yogurt, cashew paste, and cream before roasting.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Tandoori Chicken Kanti",
+            "price": 320,
+            "description": "Tandoori-style chicken pieces stir-fried with onion chunks, capsicum, and hot green chillies.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Tandoori Trout",
+            "price": 450,
+            "description": "Fresh whole Kashmiri trout fish marinated in specialized spices and tandoor-roasted.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          }
+        ]
+      },
+      {
+        "category": "Main Course",
+        "items": [
+          {
+            "name": "Dal Makhani",
+            "price": 220,
+            "description": "A timeless classic featuring slow-cooked black lentils and kidney beans in creamy tomato sauce.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Paneer Do Pyaaz",
+            "price": 360,
+            "description": "Soft paneer cubes cooked in a semi-dry gravy with a generous amount of caramelized onions.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Paneer Tikka Masala",
+            "price": 310,
+            "description": "Charcoal-grilled paneer tikka cubes simmered in a rich, spiced tomato-onion masala gravy.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Dal Fry",
+            "price": 160,
+            "description": "Yellow lentils tempered with ghee, cumin seeds, garlic, onions, and red chillies.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Nav Ratan Korma",
+            "price": 380,
+            "description": "A rich, sweet-and-spicy Mughlai curry made with nine different vegetables, fruits, and nuts.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Mughlai Chicken",
+            "price": 320,
+            "description": "Succulent chicken pieces simmered in a velvety, cashew-based curry enriched with Mughlai spices.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Murg Musallam",
+            "price": 650,
+            "description": "Regal dish of marinated whole chicken roasted and simmered in rich, spiced minced chicken gravy.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Mutton Rogan Josh",
+            "price": 390,
+            "description": "Classic Kashmiri mutton curry cooked with aromatic spices, fennel, and naturally colored with ratanjot.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Mutton Handi",
+            "price": 390,
+            "description": "Tender mutton pieces cooked in a traditional handi pot with dense, spiced brown onion gravy.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Boneless Butter Chicken",
+            "price": 390,
+            "description": "Creamy, buttery tomato gravy loaded with tender char-grilled boneless chicken pieces.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Boneless Chicken Kanti",
+            "price": 350,
+            "description": "Boneless chicken marinated in Kashmiri spices and stir-fried with thick slices of onions.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          }
+        ]
+      },
+      {
+        "category": "Breads",
+        "items": [
+          {
+            "name": "Butter Naan",
+            "price": 70,
+            "description": "Soft and flaky refined flour flatbread cooked in the tandoor and brushed with fresh butter.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Garlic Naan",
+            "price": 90,
+            "description": "Aromatic tandoori flatbread topped with minced garlic and coriander, finished with butter.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Tandoori Butter Roti",
+            "price": 50,
+            "description": "Traditional whole wheat flour flatbread baked in the clay tandoor and smeared with butter.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Chicken Keema Naan",
+            "price": 140,
+            "description": "Tandoori naan stuffed with a savory, spiced minced chicken filling and cooked until golden.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Plain Naan",
+            "price": 60,
+            "description": "Classic soft flatbread made from refined flour, baked in a traditional charcoal clay oven.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          }
+        ]
+      },
+      {
+        "category": "Rice And Biryani",
+        "items": [
+          {
+            "name": "Kashmiri Mutton Pulao",
+            "price": 460,
+            "description": "Saffron-infused rice loaded with dry fruits, nuts, and tender mutton cooked in ghee.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Kashmiri Chicken Pulao",
+            "price": 380,
+            "description": "Mild and fragrant rice dish prepared with chicken pieces, dried fruits, almonds, and saffron.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Kashmiri Veg Pulao",
+            "price": 330,
+            "description": "Aromatic basmati rice cooked with fresh seasonal vegetables and loaded with Kashmiri dry fruits.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Chicken Dum Biryani",
+            "price": 250,
+            "description": "Aromatic basmati rice and marinated chicken cooked on slow fire (dum) with herbs and saffron.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          },
+          {
+            "name": "Jeera Rice",
+            "price": 150,
+            "description": "Fluffy basmati rice tempered with cumin seeds and fresh ghee.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          }
+        ]
+      },
+      {
+        "category": "Momos",
+        "items": [
+          {
+            "name": "Chicken Steamed Momos [10 Pieces]",
+            "price": 170,
+            "description": "Steamed dumplings filled with juicy, spiced minced chicken, served with fiery red chutney.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Chicken Fried Momos [10 Pieces]",
+            "price": 190,
+            "description": "Golden crispy deep-fried momos filled with minced chicken stuffing, served with dip.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Chicken Schezwan Momos [10 Pieces]",
+            "price": 250,
+            "description": "Juicy chicken momos tossed in a hot and spicy Schezwan sauce with peppers.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Chicken Tandoori Momos [10 Pieces]",
+            "price": 260,
+            "description": "Dumplings marinated in tandoori paste, skewered and roasted to acquire a distinct smoky grill flavor.",
+            "dietary_tag": "Non-Veg",
+            "highlight_tag": "Bestseller"
+          }
+        ]
+      },
+      {
+        "category": "Desserts & Beverages",
+        "items": [
+          {
+            "name": "Zaffrani Kehwa",
+            "price": 120,
+            "description": "Traditional Kashmiri green tea brewed with saffron, almonds, cardamom, and cinnamon.",
+            "dietary_tag": "Vegan",
+            "highlight_tag": "Must-try"
+          },
+          {
+            "name": "Strawberry Shake",
+            "price": 160,
+            "description": "Thick and creamy milkshake prepared with sweet strawberries and ice cream.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Classic Milk Coffee",
+            "price": 110,
+            "description": "Rich freshly brewed espresso coffee mixed with hot frothy milk.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Classic Milk Tea",
+            "price": 80,
+            "description": "Traditional Indian masala chai brewed with fresh milk, ginger, and cardamom.",
+            "dietary_tag": "Veg",
+            "highlight_tag": "Regular"
+          },
+          {
+            "name": "Black Tea",
+            "price": 70,
+            "description": "A comforting pot of hot black tea brewed with premium local leaves.",
+            "dietary_tag": "Vegan",
+            "highlight_tag": "Regular"
+          }
+        ]
+      }
+    ]
+  }
+}
