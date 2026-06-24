@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Restaurant Website Package - Pitch</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #0f0f11;
+      --bg-card: #1a1a1e;
+      --bg-card-hover: #222228;
+      --primary: #f59e0b; /* Saffron Gold */
+      --primary-hover: #d97706;
+      --secondary: #ef4444; /* Crimson */
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dark: #111827;
+      --success: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-top: 1rem;
+    }
+
+    .logo-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+    }
+
+    .logo-container svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, #ffffff, var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title svg {
+      width: 22px;
+      height: 22px;
+      color: var(--primary);
+    }
+
+    /* Pain Points Cards */
+    .pain-points {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 1.25rem;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      background-color: var(--bg-card-hover);
+      border-color: rgba(245, 158, 11, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background-color: rgba(239, 68, 68, 0.15);
+      border-radius: 50%;
+      color: var(--secondary);
+    }
+
+    .card-icon.success {
+      background-color: rgba(16, 185, 129, 0.15);
+      color: var(--success);
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    /* Before vs After */
+    .compare-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .compare-box {
+      border-radius: 16px;
+      padding: 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .compare-box.before {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.03));
+      border: 1px solid rgba(239, 68, 68, 0.2);
+    }
+
+    .compare-box.after {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.03));
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .before .badge {
+      background-color: var(--secondary);
+      color: white;
+    }
+
+    .after .badge {
+      background-color: var(--success);
+      color: white;
+    }
+
+    .compare-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .compare-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .compare-item svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .before .compare-item svg {
+      color: var(--secondary);
+    }
+
+    .after .compare-item svg {
+      color: var(--success);
+    }
+
+    /* Features Checklist */
+    .features-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      background-color: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+
+    @media (min-width: 480px) {
+      .features-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .feature-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--success);
+      flex-shrink: 0;
+    }
+
+    /* Pricing */
+    .pricing-table {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .price-card {
+      background-color: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 1.75rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--primary);
+      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.15);
+    }
+
+    .price-header {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .featured .price-header {
+      color: var(--primary);
+    }
+
+    .price-value {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .price-sub {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .price-features {
+      list-style: none;
+      text-align: left;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 1.25rem;
+    }
+
+    .price-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+      color: var(--text-muted);
+    }
+
+    .price-feature-item strong {
+      color: white;
+    }
+
+    .price-feature-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* Testimonial */
+    .testimonial {
+      background-color: var(--bg-card);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 16px 16px 0;
+      padding: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--primary);
+    }
+
+    /* CTA Button */
+    .cta-container {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+      background-color: #25d366; /* WhatsApp Green */
+      color: white;
+      text-decoration: none;
+      padding: 1.1rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta-btn:hover {
+      background-color: #20ba5a;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4);
+    }
+
+    .cta-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <!-- Chef Hat / Restaurant Icon -->
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C8.69 2 6 4.69 6 8c0 1.25.38 2.4 1.03 3.38C5.2 12.23 4 14.2 4 16.5c0 3.03 2.47 5.5 5.5 5.5h5c3.03 0 5.5-2.47 5.5-5.5 0-2.3-1.2-4.27-3.03-5.12.65-.98 1.03-2.13 1.03-3.38 0-3.31-2.69-8-6-8zm0 18.5c-1.93 0-3.5-1.57-3.5-3.5V16c0-.55.45-1 1-1h5c.55 0 1 .45 1 1v1c0 1.93-1.57 3.5-3.5 3.5zM12 4c2.01 0 3.5 2.5 3.5 4S14.01 10.5 12 10.5s-3.5-1.5-3.5-2.5 1.49-4 3.5-4z"/>
+      </svg>
+    </div>
+    <h1>Premium Restaurant Website Package</h1>
+    <p class="subtitle">Complete Online Dining & Direct Ordering Solution</p>
+  </header>
+
+  <!-- Problem & Solution -->
+  <section>
+    <h2 class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      3 Core Pain Points Solved
+    </h2>
+    <div class="pain-points">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon">💸</span>
+          <span class="card-title">Eliminate High Commissions</span>
+        </div>
+        <p class="card-desc">Avoid paying 15-30% commissions on third-party orders. Customers order directly via WhatsApp or reserve tables directly on your site.</p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon">📱</span>
+          <span class="card-title">Digitize Your Menu</span>
+        </div>
+        <p class="card-desc">No more sending blurry PDF menus on chat. Give customers an interactive, easily searchable web menu with dietary and spice filters.</p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-icon">⭐</span>
+          <span class="card-title">Boost Google Maps Bookings</span>
+        </div>
+        <p class="card-desc">A custom link on your Google Maps listing raises trust, makes reservation easy, and sets you apart from plain competing profiles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before vs After -->
+  <section>
+    <h2 class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+      Before vs. After
+    </h2>
+    <div class="compare-container">
+      <div class="compare-box before">
+        <span class="badge">Before</span>
+        <ul class="compare-list">
+          <li class="compare-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Paying up to 30% commission on delivery orders.
+          </li>
+          <li class="compare-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Receiving constant calls asking for menu items and prices.
+          </li>
+          <li class="compare-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Taking table bookings on messy paper notes.
+          </li>
+        </ul>
+      </div>
+      <div class="compare-box after">
+        <span class="badge">After</span>
+        <ul class="compare-list">
+          <li class="compare-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Direct customer contact with zero commission fees.
+          </li>
+          <li class="compare-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Beautiful, instantly searchable menu online 24/7.
+          </li>
+          <li class="compare-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Structured reservation requests directly in your inbox.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Checklist -->
+  <section>
+    <h2 class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      What's Included
+    </h2>
+    <div class="features-list">
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        📱 Mobile-Responsive
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        ⚡ Ultra-Fast Load Speeds
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🍲 Categorized Digital Menu
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🔍 Instant Menu Search
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        📅 Online Reservations
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        💬 Floating WhatsAppFAB
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        📞 One-Tap Quick Calling
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        📍 Google Maps Embed
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        📸 Masonry Grid Gallery
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🟢 Veg / Non-Veg filters
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        💳 Zomato / Swiggy integration
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        📝 Easy Menu JSON Updates
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🌓 High-Contrast Design
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🏷️ Local SEO Meta Tags
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🎟️ Promo & Coupons Page
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🏗️ React SPA Architecture
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🎡 Chef Specialties Slider
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🛡️ Automatic SSL Setup
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🚀 GitHub Actions Autodeploy
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        🌓 Glassmorphism Aesthetics
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        ♿ Fully Accessible Layout
+      </div>
+      <div class="feature-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        📸 Lightweight Webp Assets
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section>
+    <h2 class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+      Clear Pricing Packages
+    </h2>
+    <div class="pricing-table">
+      <div class="price-card featured">
+        <div class="price-header">Website Package</div>
+        <div class="price-value">₹50,000</div>
+        <div class="price-sub">One-time development + ₹3,000/year hosting</div>
+        <ul class="price-features">
+          <li class="price-feature-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Custom design matching your <strong>brand values</strong></span>
+          </li>
+          <li class="price-feature-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Fully optimized local code & assets</span>
+          </li>
+          <li class="price-feature-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Includes <strong>Domain & SSL</strong> setup</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Add-ons -->
+      <div class="price-card">
+        <div class="price-header">Premium Add-ons</div>
+        <div class="price-features">
+          <div class="price-feature-item" style="margin-bottom: 1rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Google Ads setup (₹10,000 one-time):</strong> Get targeted search visibility immediately.</span>
+          </div>
+          <div class="price-feature-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Social Media Starter Pack (₹5,000/mo):</strong> Post and story templates to highlight the website.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonial Placeholder -->
+  <section>
+    <h2 class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      What Client Says
+    </h2>
+    <div class="testimonial">
+      <p class="testimonial-text">"Having a direct reservation and menu link on our Google Business profile has saved us dozens of hours on calls. Our customers love the direct WhatsApp chat and online menu!"</p>
+      <p class="testimonial-author">— Owner, Tandoor Srinagar</p>
+    </div>
+  </section>
+
+  <!-- WhatsApp Call-to-Action -->
+  <div class="cta-container">
+    <a href="https://wa.me/917780938743?text=Hi!%20I'm%20interested%20in%20building%20a%20premium%20website%20for%20my%20restaurant." class="cta-btn" target="_blank">
+      <svg viewBox="0 0 24 24">
+        <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.335 4.963L2 22l5.233-1.371a9.927 9.927 0 0 0 4.779 1.22h.005c5.505 0 9.989-4.478 9.99-9.985A9.983 9.983 0 0 0 12.012 2zm4.986 14.13c-.273.767-1.584 1.472-2.183 1.54-.598.068-1.196.34-3.83-.699-3.167-1.252-5.187-4.464-5.346-4.673-.158-.21-1.285-1.704-1.285-3.25 0-1.547.813-2.308 1.103-2.616.29-.307.632-.385.843-.385.212 0 .424.001.608.01.193.008.455-.072.712.548.265.638.905 2.193.984 2.352.079.16.132.346.026.557-.105.21-.158.34-.316.523-.158.182-.332.406-.474.545-.158.156-.324.327-.14.64.184.314.819 1.348 1.758 2.185.938.837 1.733 1.096 2.05 1.253.316.158.5-.132.686-.347.184-.216.818-.953 1.037-1.282.22-.329.439-.273.74-.16.302.115 1.916.904 2.247 1.069.33.165.55.244.63.385.082.14.082.812-.191 1.579z"/>
+      </svg>
+      Get a Demo for Your Restaurant
+    </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Premium Restaurant Web Solutions</p>
+  </footer>
+
+</body>
+</html>
