@@ -22,7 +22,7 @@ import BottomNav from './components/BottomNav';
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#0e0d11] text-gray-100 flex flex-col font-sans select-none relative overflow-x-hidden pb-16 lg:pb-0">
+      <div className="min-h-screen bg-app-bg text-app-text flex flex-col font-sans select-none relative overflow-x-hidden pb-16 lg:pb-0 transition-colors duration-300">
         
         {/* Global Loading Overlay */}
         <LoadingScreen />

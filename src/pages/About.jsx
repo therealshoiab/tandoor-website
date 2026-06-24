@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Award, ShieldAlert, Heart, Compass, ShieldCheck, Flame, Users } from 'lucide-react';
+import { Award, Heart, Flame, Users } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import ambiance from '../assets/restaurant_ambiance.png';
 
@@ -25,17 +25,17 @@ export default function About() {
   ];
 
   return (
-    <div className="relative text-gray-200 overflow-hidden font-sans">
+    <div className="relative text-app-text overflow-hidden font-sans">
       <SEOHead 
         title="Tandoor Srinagar | About Us" 
         description="Learn about the legacy, dining philosophy, and authentic clay oven grilling traditions of Tandoor, Lal Chowk, Srinagar."
       />
 
       {/* Hero Banner */}
-      <section className="relative px-6 py-20 bg-gradient-to-b from-[#0b0a0e]/40 to-[#0e0d11] border-b border-white/5 text-center">
+      <section className="relative px-6 py-20 bg-app-section border-b border-app-border text-center">
         <div className="max-w-4xl mx-auto space-y-4">
           <span className="text-[#f2b90f] text-xs font-bold tracking-widest uppercase font-mono">Our Narrative</span>
-          <h1 className="text-4xl md:text-7xl font-bold font-serif text-white">The Legacy of Tandoor</h1>
+          <h1 className="text-4xl md:text-7xl font-bold font-serif text-app-white">The Legacy of Tandoor</h1>
           <div className="h-0.5 w-16 bg-[#f2b90f] mx-auto mt-2"></div>
         </div>
       </section>
@@ -49,15 +49,15 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <h2 className="text-3xl md:text-4xl font-bold font-serif text-white">Crafting Smoky Delicacies in Lal Chowk</h2>
-          <p className="text-gray-400 font-light leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-app-white">Crafting Smoky Delicacies in Lal Chowk</h2>
+          <p className="text-app-muted font-light leading-relaxed">
             Established in Srinagar near the historic Palladium Cinema, Tandoor was created to fill a specific gap: providing true, authentic Mughlai curries and wood-charcoal roasted tandoori starters with outstanding dining and delivery convenience.
           </p>
-          <p className="text-sm text-gray-500 font-light leading-relaxed">
+          <p className="text-sm text-app-muted font-light leading-relaxed">
             Our chefs blend traditional spices (like Kashmiri saffron, cockscomb ratanjot, dried ginger, and fennel seeds) to perfect recipes like our flagship Mutton Rogan Josh and Special Tandoori Karachi Tikka. Everything is roasted to order inside clay pots to lock in the flavor.
           </p>
-          <p className="text-sm text-gray-500 font-light leading-relaxed">
-            Whether you dine in with family or order delivery to your home, we bring a royal feast experience straight to your plate.
+          <p className="text-sm text-app-muted font-light leading-relaxed">
+            Whether you dine in with family or order delivery to your hotel or home, we bring a royal feast experience straight to your plate.
           </p>
         </motion.div>
 
@@ -66,17 +66,17 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative h-[350px] rounded-3xl overflow-hidden border border-white/5"
+          className="relative h-[350px] rounded-3xl overflow-hidden border border-app-border"
         >
           <img src={ambiance} alt="Tandoor clay oven kitchen" loading="lazy" className="w-full h-full object-cover" />
         </motion.div>
       </section>
 
       {/* Values Strip */}
-      <section className="bg-[#0b0a0e]/60 py-20 px-6 border-y border-white/5">
+      <section className="bg-app-section py-20 px-6 border-y border-app-border">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center max-w-lg mx-auto space-y-2">
-            <h2 className="text-3xl font-bold font-serif text-white">Our Core Values</h2>
+            <h2 className="text-3xl font-bold font-serif text-app-white">Our Core Values</h2>
             <p className="text-xs text-[#f2b90f] uppercase tracking-widest font-mono">Dine with trust</p>
           </div>
 
@@ -88,11 +88,11 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-8 rounded-2xl bg-[#111015]/60 border border-white/5 space-y-4"
+                className="p-8 rounded-3xl bg-app-card border border-app-border space-y-4 hover:border-[#f2b90f]/20 hover:bg-app-card-hover transition-all duration-300"
               >
                 <div className="p-3 bg-white/5 rounded-full w-fit">{item.icon}</div>
-                <h3 className="text-lg font-bold text-white font-serif">{item.title}</h3>
-                <p className="text-xs text-gray-400 font-light leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg font-bold text-app-white font-serif">{item.title}</h3>
+                <p className="text-xs text-app-muted font-light leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -102,8 +102,8 @@ export default function About() {
       {/* Culinary Team Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-2">
-          <h2 className="text-3xl font-bold font-serif text-white">The Culinary Masters</h2>
-          <p className="text-xs text-gray-500 uppercase">Expert Tandoor Roasters</p>
+          <h2 className="text-3xl font-bold font-serif text-app-white">The Culinary Masters</h2>
+          <p className="text-xs text-app-muted uppercase font-mono tracking-widest">Expert Tandoor Roasters</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -112,15 +112,15 @@ export default function About() {
             { role: "Master Tandoor Roaster", name: "Chef Gulzar Ahmed" },
             { role: "Pastry & Beverages Lead", name: "Chef Tariq Shah" }
           ].map((member, idx) => (
-            <div key={idx} className="bg-[#111015]/60 border border-white/5 p-6 rounded-2xl space-y-4">
-              <div className="w-24 h-24 bg-white/5 border border-white/5 rounded-full mx-auto flex items-center justify-center">
+            <div key={idx} className="bg-app-card border border-app-border p-6 rounded-3xl space-y-4 hover:border-[#f2b90f]/20 hover:bg-app-card-hover transition-all duration-300">
+              <div className="w-24 h-24 bg-white/5 border border-app-border rounded-full mx-auto flex items-center justify-center">
                 <Users className="w-8 h-8 text-[#f2b90f]" />
               </div>
               <div>
-                <h4 className="font-bold text-white text-base font-serif">{member.name}</h4>
-                <p className="text-xs text-gray-500 font-light mt-0.5">{member.role}</p>
+                <h3 className="font-bold text-app-white text-base font-serif">{member.name}</h3>
+                <p className="text-xs text-app-muted font-light mt-0.5">{member.role}</p>
               </div>
-              <p className="text-xs text-gray-400 font-light leading-relaxed">
+              <p className="text-xs text-app-muted font-light leading-relaxed">
                 Decades of expertise handling intense wood tandoor temperatures and spice tempering.
               </p>
             </div>
@@ -129,23 +129,23 @@ export default function About() {
       </section>
 
       {/* Amenities Grid */}
-      <section className="bg-[#0b0a0e] py-16 px-6 border-t border-white/5">
+      <section className="bg-app-section py-16 px-6 border-t border-app-border">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/5 space-y-2">
-            <h4 className="font-bold text-white text-sm">Full AC</h4>
-            <p className="text-xs text-gray-500 font-light">Climate-controlled indoor seating area.</p>
+          <div className="p-6 rounded-2xl bg-white/5 border border-app-border space-y-2">
+            <h4 className="font-bold text-app-white text-sm">Full AC</h4>
+            <p className="text-xs text-app-muted font-light">Climate-controlled indoor seating area.</p>
           </div>
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/5 space-y-2">
-            <h4 className="font-bold text-white text-sm">Takeaway & Delivery</h4>
-            <p className="text-xs text-gray-500 font-light">Packaged hot in premium leakproof containers.</p>
+          <div className="p-6 rounded-2xl bg-white/5 border border-app-border space-y-2">
+            <h4 className="font-bold text-app-white text-sm">Takeaway & Delivery</h4>
+            <p className="text-xs text-app-muted font-light">Packaged hot in premium leakproof containers.</p>
           </div>
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/5 space-y-2">
-            <h4 className="font-bold text-white text-sm">Digital Payments</h4>
-            <p className="text-xs text-gray-500 font-light">Cards, UPI, and major digital wallets accepted.</p>
+          <div className="p-6 rounded-2xl bg-white/5 border border-app-border space-y-2">
+            <h4 className="font-bold text-app-white text-sm">Digital Payments</h4>
+            <p className="text-xs text-app-muted font-light">Cards, UPI, and major digital wallets accepted.</p>
           </div>
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/5 space-y-2">
-            <h4 className="font-bold text-white text-sm">Family Seating</h4>
-            <p className="text-xs text-gray-500 font-light">Dedicated spaces for group bookings.</p>
+          <div className="p-6 rounded-2xl bg-white/5 border border-app-border space-y-2">
+            <h4 className="font-bold text-app-white text-sm">Family Seating</h4>
+            <p className="text-xs text-app-muted font-light">Dedicated spaces for group bookings.</p>
           </div>
         </div>
       </section>

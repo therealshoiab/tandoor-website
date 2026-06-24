@@ -16,7 +16,7 @@ export default function BottomNav() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#0e0d11]/90 backdrop-blur-xl border-t border-white/5 shadow-[0_-8px_30px_rgb(0,0,0,0.5)] z-40 px-4 py-2">
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-app-navbar/90 backdrop-blur-xl border-t border-app-border shadow-[0_-8px_30px_rgba(0,0,0,0.1)] z-40 px-4 py-2">
       <div className="flex justify-between items-center max-w-md mx-auto">
         {navItems.map((item) => {
           const active = isActive(item.path);

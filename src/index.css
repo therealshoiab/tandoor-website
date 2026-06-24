@@ -5,6 +5,69 @@
   --font-serif: "Playfair Display", Georgia, serif;
 }
 
+/* Theme variables */
+:root {
+  --bg-color: #0c0b0f;
+  --card-bg: rgba(17, 16, 21, 0.6);
+  --card-bg-hover: rgba(22, 21, 27, 0.95);
+  --text-color: #e5e7eb;
+  --text-white: #ffffff;
+  --text-muted: #9ca3af;
+  --border-color: rgba(255, 255, 255, 0.05);
+  --navbar-bg: rgba(14, 13, 17, 0.95);
+  --section-bg: #0b0a0e;
+  --input-bg: rgba(17, 16, 21, 0.8);
+}
+
+html.light {
+  --bg-color: #f7f6f9;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-bg-hover: rgba(255, 255, 255, 1);
+  --text-color: #374151;
+  --text-white: #111827;
+  --text-muted: #6b7280;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --navbar-bg: rgba(255, 255, 255, 0.9);
+  --section-bg: #eae9ee;
+  --input-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* Base custom classes to match theme */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom utilities mapping to theme variables */
+.bg-app-bg { background-color: var(--bg-color); }
+.bg-app-card { background-color: var(--card-bg); }
+.bg-app-card-hover:hover { background-color: var(--card-bg-hover); }
+.text-app-text { color: var(--text-color); }
+.text-app-white { color: var(--text-white); }
+.text-app-muted { color: var(--text-muted); }
+.border-app-border { border-color: var(--border-color); }
+.bg-app-navbar { background-color: var(--navbar-bg); }
+.bg-app-section { background-color: var(--section-bg); }
+.bg-app-input { background-color: var(--input-bg); }
+
+/* Infinite Scroll Marquee */
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
