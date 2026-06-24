@@ -43,38 +43,7 @@ export default function Home() {
     { text: "Excellent veg selection too. We tried the paneer tikka masala, tawa veg, tadka daal, and laccha parantha.", author: "Vikram N." }
   ];
 
-  const instagramVideos = [
-    {
-      url: "https://www.instagram.com/tandoor.lalchowk/reel/DSm1GN4CJMq/",
-      videoSrc: "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0220a208c1d58309ec9b092ff5e28a5&profile_id=139&oauth2_token_id=57447761",
-      poster: "https://instagram.fixj2-1.fna.fbcdn.net/v/t51.82787-15/602462355_18063439517549794_713364526625917149_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=105&ig_cache_key=Mzc5Mzk1MzI1OTc4NjkwMDI2NjE4MDYzNDM5NTExNTQ5Nzk0.3-ccb7-5&ccb=7-5&_nc_sid=58cdad"
-    },
-    {
-      url: "https://www.instagram.com/tandoor.lalchowk/reel/DPluU3QAchl/",
-      videoSrc: "https://player.vimeo.com/external/434045526.sd.mp4?s=c1b3f9ff47372d627c28d71221b65e90d1bf47ff&profile_id=165&oauth2_token_id=57447761",
-      poster: "https://instagram.fixj2-1.fna.fbcdn.net/v/t51.71878-15/562436648_1482836069716093_6335728275997481200_n.jpg?stp=dst-jpegr_e15_tt6&_nc_cat=103&ig_cache_key=MzczOTU5ODgwOTQ1NDQ2MzA3Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad"
-    },
-    {
-      url: "https://www.instagram.com/tandoor.lalchowk/reel/DKfV5sTTNKB/",
-      videoSrc: "https://player.vimeo.com/external/538569502.sd.mp4?s=d00cf2b694be812d6a5d4615a1e741e06fa91df1&profile_id=165&oauth2_token_id=57447761",
-      poster: "https://instagram.fixj2-1.fna.fbcdn.net/v/t51.71878-15/503979336_24003530139281868_4966200284949950296_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=MzY0NzczMDU0Njc0ODc0MDIyNTczNzMzNjg5MjMxMDU4Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad"
-    },
-    {
-      url: "https://www.instagram.com/tandoor.lalchowk/reel/DGAVoi3Pdgk/",
-      videoSrc: "https://player.vimeo.com/external/435674703.sd.mp4?s=7f26a113a30c5e7b51b72e5c6bb05c7553b6fa0f&profile_id=165&oauth2_token_id=57447761",
-      poster: "https://instagram.fixj2-1.fna.fbcdn.net/v/t51.75761-15/475459277_18030797174549794_2374593825217094060_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=101&ig_cache_key=MzU2Njk0NjA1MDA2NzI1NzM4MDE4MDMwNzk3MTcxNTQ5Nzk0.3-ccb7-5&ccb=7-5&_nc_sid=58cdad"
-    },
-    {
-      url: "https://www.instagram.com/tandoor.lalchowk/reel/DFztn4AvPyL/",
-      videoSrc: "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0220a208c1d58309ec9b092ff5e28a5&profile_id=139&oauth2_token_id=57447761",
-      poster: "https://instagram.fixj2-1.fna.fbcdn.net/v/t51.75761-15/476464512_18029991056549794_3010619316638906560_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=MzU2MzM5MjM4MjQ3NDcxNDI1MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad"
-    },
-    {
-      url: "https://www.instagram.com/tandoor.lalchowk/reel/CnKHUthIBpt/",
-      videoSrc: "https://player.vimeo.com/external/434045526.sd.mp4?s=c1b3f9ff47372d627c28d71221b65e90d1bf47ff&profile_id=165&oauth2_token_id=57447761",
-      poster: "https://instagram.fixj2-1.fna.fbcdn.net/v/t51.71878-15/497076784_1770424023510246_2132457448986677592_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=109&ig_cache_key=MzAxMTI1MTUxMDQzOTg0NDQ2MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad"
-    }
-  ];
+
 
   const handleOrderWhatsApp = (dishName) => {
     const text = encodeURIComponent(`Hello Tandoor! I would like to order: ${dishName}`);
@@ -402,29 +371,21 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-            {instagramVideos.map((v, idx) => (
-              <a
-                href={v.url}
-                target="_blank"
-                rel="noreferrer"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {["CnKHUthIBpt", "CT2I9qaBbtH", "CNWxxkLHguo", "DSm1GN4CJMq", "DPluU3QAchl", "DKfV5sTTNKB"].map((shortcode, idx) => (
+              <div
                 key={idx}
-                aria-label={`View Instagram Reel ${idx + 1}`}
-                className="relative h-44 rounded-2xl overflow-hidden border border-app-border group block bg-[#0c0b0f]"
+                className="bg-app-card border border-app-border rounded-3xl overflow-hidden shadow-lg p-2 flex flex-col justify-center h-[460px] md:h-[480px] transition-transform duration-300 hover:-translate-y-1 hover:border-[#f2b90f]/20"
               >
-                <video
-                  src={v.videoSrc}
-                  poster={v.poster}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-xs font-bold text-[#f2b90f] gap-1">
-                  <span>Play Reel</span>
-                </div>
-              </a>
+                <iframe
+                  src={`https://www.instagram.com/p/${shortcode}/embed/`}
+                  className="w-full h-full border-0 rounded-2xl"
+                  scrolling="no"
+                  allowtransparency="true"
+                  allow="encrypted-media"
+                  title={`Instagram Post ${idx + 1}`}
+                ></iframe>
+              </div>
             ))}
           </div>
         </div>
