@@ -199,7 +199,7 @@ export default function Menu() {
         <div className="flex flex-col md:flex-row gap-4 items-center justify-between max-w-2xl mx-auto">
           {/* Search Input */}
           <div className="relative w-full md:flex-1">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-app-muted w-5 h-5" />
             <input
               type="text"
               id="menu-search"
@@ -208,12 +208,12 @@ export default function Menu() {
               placeholder="Search for Rogan Josh, Paneer, Momos..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-app-input border border-app-border focus:border-[#f2b90f]/50 rounded-full py-3.5 pl-12 pr-6 text-sm text-app-white focus:outline-none transition-all"
+              className="w-full bg-app-input border border-app-border focus:border-[#f2b90f]/50 rounded-full py-3.5 pl-12 pr-6 text-sm text-app-white placeholder:text-app-muted focus:outline-none transition-all"
             />
           </div>
           
           {/* Diet Filter Switch */}
-          <div className="flex bg-white/5 border border-app-border p-1 rounded-full shrink-0">
+          <div className="flex bg-app-card border border-app-border p-1 rounded-full shrink-0">
             {['All', 'Veg', 'Non-Veg'].map(d => (
               <button
                 key={d}

@@ -98,15 +98,15 @@ export default function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle Light/Dark Theme"
-            className="p-2 bg-white/5 text-[#f2b90f] rounded-full border border-app-border min-w-[44px] min-h-[44px] flex items-center justify-center"
+            className="p-2 bg-white/5 text-[#f2b90f] rounded-full border border-app-border min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer"
           >
-            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5 text-gray-700" />}
+            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5 text-[#f2b90f]" />}
           </button>
           
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Navigation Menu"
-            className="text-app-text hover:text-white focus:outline-none p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
+            className="text-app-text hover:text-[#f2b90f] focus:outline-none p-2 min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

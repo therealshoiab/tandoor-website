@@ -58,13 +58,13 @@ export default function Offers() {
             className="p-8 rounded-2xl bg-app-card border border-app-border hover:border-[#f2b90f]/20 hover:bg-app-card-hover transition-all flex flex-col justify-between"
           >
             <div className="space-y-4">
-              <div className="p-3 bg-white/5 rounded-full w-fit">{deal.icon}</div>
+              <div className="p-3 bg-app-card rounded-full w-fit">{deal.icon}</div>
               <h3 className="text-lg font-bold text-app-white font-serif">{deal.title}</h3>
               <span className="block text-xs font-semibold text-[#f2b90f] font-mono tracking-wide">{deal.timing}</span>
               <p className="text-xs text-app-muted font-light leading-relaxed">{deal.desc}</p>
             </div>
             <div className="pt-6">
-              <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold font-mono">Dine-in / Takeaway Only</span>
+              <span className="text-[10px] text-app-muted uppercase tracking-widest font-bold font-mono">Dine-in / Takeaway Only</span>
             </div>
           </motion.div>
         ))}

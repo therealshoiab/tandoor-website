@@ -218,7 +218,7 @@ export default function Home() {
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="absolute -top-4 -left-4 bg-[#111015] border border-[#f2b90f]/30 text-app-white px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2 text-xs font-bold backdrop-blur-md"
+                className="absolute -top-4 -left-4 bg-app-card border border-[#f2b90f]/30 text-app-white px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2 text-xs font-bold backdrop-blur-md"
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
                 Fresh Charcoal Baking
@@ -228,7 +228,7 @@ export default function Home() {
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
-                className="absolute -bottom-4 -right-4 bg-[#111015] border border-app-border text-app-white px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-2 text-xs font-bold backdrop-blur-md"
+                className="absolute -bottom-4 -right-4 bg-app-card border border-app-border text-app-white px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-2 text-xs font-bold backdrop-blur-md"
               >
                 <Compass className="w-4 h-4 text-[#f2b90f]" />
                 Central Lal Chowk

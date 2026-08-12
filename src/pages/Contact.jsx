@@ -272,7 +272,7 @@ export default function Contact() {
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
-          className="filter invert grayscale brightness-90 contrast-125"
+          className="dark:filter dark:invert dark:grayscale dark:brightness-90 dark:contrast-125"
         ></iframe>
       </motion.div>
 

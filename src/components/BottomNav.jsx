@@ -35,7 +35,7 @@ export default function BottomNav() {
               <div className={`transition-all duration-300 ${
                 active 
                   ? 'text-[#f2b90f] scale-110' 
-                  : 'text-gray-400 group-hover:text-gray-200'
+                  : 'text-app-muted group-hover:text-[#f2b90f]'
               }`}>
                 {item.icon}
               </div>
@@ -43,7 +43,7 @@ export default function BottomNav() {
               <span className={`text-[10px] mt-1 font-medium transition-all duration-300 ${
                 active 
                   ? 'text-[#f2b90f] font-semibold' 
-                  : 'text-gray-500 group-hover:text-gray-300'
+                  : 'text-app-muted group-hover:text-[#f2b90f]'
               }`}>
                 {item.name}
               </span>
