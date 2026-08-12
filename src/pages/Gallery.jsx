@@ -32,11 +32,55 @@ function SafeImage({ src, fallback, alt, className }) {
   );
 }
 
+// Reliable high-definition food and ambiance imagery mapped to each title/category
+const galleryImageBank = [
+  "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop", // Wazwan Feast
+  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop", // Warm Rustic Ambiance
+  "https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=800&auto=format&fit=crop", // Kashmiri Kehwa
+  "https://images.unsplash.com/photo-1608897013039-887f21d8c804?q=80&w=800&auto=format&fit=crop", // Tandoori Fish Trout
+  "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop", // Dining Review Event
+  "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?q=80&w=800&auto=format&fit=crop", // Garlic Naan
+  "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop", // Sufi Ghazal Dinner
+  "https://images.unsplash.com/photo-1541544741938-0af808871cc0?q=80&w=800&auto=format&fit=crop", // Clay Oven Charcoal
+  "https://images.unsplash.com/photo-1545242944-e24839a62615?q=80&w=800&auto=format&fit=crop", // Mughlai Curries
+  "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?q=80&w=800&auto=format&fit=crop", // Tandoori Platter
+  "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=800&auto=format&fit=crop", // Kebab Skewers
+  "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop", // Gourmet Dining
+  "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800&auto=format&fit=crop", // Kashmiri Pulao
+  "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop", // Happy Customers
+  "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=800&auto=format&fit=crop", // Cozy Interiors
+  "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=800&auto=format&fit=crop", // Premium Seating
+  "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=800&auto=format&fit=crop", // Mutton Kanti
+  "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop", // Clay Tandoor Setup
+  "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop", // Mughlai Biryani
+  "https://images.unsplash.com/photo-1561651823-34fed0225408?q=80&w=800&auto=format&fit=crop", // Chicken Seekh Kebabs
+  "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=800&auto=format&fit=crop", // Signature Gravies
+  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop", // Family Dinner Table
+  "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=800&auto=format&fit=crop", // Weekend Family Dining
+  "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800&auto=format&fit=crop", // Grilling Trout
+  "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?q=80&w=800&auto=format&fit=crop", // Central Lal Chowk
+  "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=800&auto=format&fit=crop", // Crispy Tandoori Roti
+  "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?q=80&w=800&auto=format&fit=crop", // Paneer Tikka Platter
+  "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?q=80&w=800&auto=format&fit=crop", // Butter Chicken
+  "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=800&auto=format&fit=crop", // Rustic Wood Interior
+  "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop", // Chef Preparing Kebabs
+  "https://images.unsplash.com/photo-1507914372368-b2b085b926a1?q=80&w=800&auto=format&fit=crop", // Warm Evening Lighting
+  "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop", // Cozy Dining Cabin
+  "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?q=80&w=800&auto=format&fit=crop", // Rogan Josh Serving
+  "https://images.unsplash.com/photo-1625220194771-7ebedd0b7d10?q=80&w=800&auto=format&fit=crop", // Steaming Momos
+  "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?q=80&w=800&auto=format&fit=crop", // Laccha Paratha
+  "https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=800&auto=format&fit=crop", // Aroma of Wazwan
+  "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop"  // Tandoor Brand Launch
+];
+
+// Fallback tier 2 image
+const fallbackTier2 = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop";
+
 export default function Gallery() {
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [lightboxIdx, setLightboxIdx] = useState(null);
 
-  // Mapped Instagram shortcodes and resolved Google Maps CDN photo URLs
+  // Mapped Instagram shortcodes and direct reliable high-res imagery
   const instagramPosts = [
     { shortcode: "CnKHUthIBpt", title: "Authentic Wazwan Feast", category: "Food" },
     { shortcode: "CT2I9qaBbtH", title: "Warm Rustic Restaurant Ambiance", category: "Ambiance" },
@@ -77,36 +121,9 @@ export default function Gallery() {
     { shortcode: "CNUYfUYnwwj", title: "Tandoor Brand Launch", category: "Events" }
   ];
 
-  const mapsImages = [
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEHDXJK9EikojpAbneneUtdiHiN_zqn-4fvEbtiza7UbhoX-hQoHye0_mQOjalhZgAph3pNXKA6iwWHKnyFnGTDsFXmewNbZLFS8rV6BwYOTd1VSLwbhyKsJBv9yFKofwOWO53dbm30jOJ0=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEG-MFrAqvGD2MiCIHGuMtBQfOgaLVw-6RhPKfF-97WFqr6iuPXHR7tBgqLBFiKxLRY7gkjiQ_4J1n16438rnmgo6dfUMy_AMz4PzEcO9hgTdyZycnXOIz0ezR4WjuvGUm7ppi_=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF5CQV-DbeiYUU_HE7bm53ifUO7t_Nm7fs1d6r01wZ6aWYzr0b4oVSHXj2lgDOZijD1NTOvObuSGxUd9JRUdnUOBr_b9-NAqTdViBhbIf80X82VH4lCacIxvJx-Dr_jteOG1Tkc_0INc1cB=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHV4q47Wjp6sjjtw8hZfpWYbMXdfzcXm_FiltoTAk9993IuF_EUHzVhbMdthM4tHYfzMAKAByITrxRg9Pyj_hgEbRl8kKzmlc-Cm0RS8pgGFIRoOZzZC10skOB9E37F-HEMSQXVQocB24sw=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH9Drltj9f5PZUMadgr0N3TD4dVokBtptzXVB5gKdo_5NQd8hXDKesgMvKWIg9llYo3XX-aknngRuYnKDYmMNCD56-qe2FstgWUVH3PwuWpYQTt6y0mbWC25K_O35AWF7V1Gpvy5KZwPiI=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFtA9zxCO2vuBQ12u4FlBeoMY4O1-El2BJ0QijYU_bJoO8OUjxy1NH8_NH3Vl-C6fSZBZcEdgjrHrq60OipBsqisPMhnahwmzveTonxFTU8nqxhEH6ActZYaPHo7QKvCOWh1fpm=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsST9uD-FOoRFDUk-gSh1EupfzC-ATzaMPD_xIl8WWXRB3UJt3b0xJk__rQI18glP7i7Q-b1oBqGnY-ixZIvpt6A_mvMWRXcY8sB8HGdIoq26NxrEm7_FWssZ9iCDVOOWMyGMxgg=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJik9LEJ1BldvY7A4t2vnc5GwbVsjKlzFzavbwjXMKLKQxXRrd5fyBjT_ZgJMXkTx3TF28-dCF9vMC610Z0hnYYwvzeXjNunii9ObHZp0nHzFWVg7xu7Ddo-qzH_sq47H6c-tF=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGTXxoGZlBJMhBox3IBSE4qsyf6n2_R97piifEuSsduOLf_L6I3xk80_WLeH1EzZSU5hl-TqYmvmOPEGa74GGzyCFFcIdHhm4_dvlpOoH7g-GP46VUZLG17di4eu0arRf3W651Z=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHY3FjWvUSw-QAPOB6VWbEm08jkaye9NLv7Dp6S-UC5OgnttEeE8PPPk6p4Y_Jz_mC5ejsYeZmCcwm5QHq8vgfiWKYb0F8RZ1t-IVMPMyFNM7w5hSOtzDUVes_4KjiKkumTiK22Ux5t7mI=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJl6yRuoiLo-Z3PDopKZoS2nWKi05zFuWFjiTNA5QDIya04L_9IsDhFwOgEoqobF_bsXvRvDEF2TezuLEWXkeMLzwY2inhyhnHN0lnqfxiodUcAPPkaNdOBbdDpL8eSOXyrZLdVw=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHKHjiArVqezQS7DPiWGrVrPrcqx9mITNKiHs-HOZ4qrAhO3tPO4E33yvD08jBjRUqc_DmablBO-UUluuSRp-o7sSACPtNqEn2fw453rlEUPHmYTWd1AdargVyf0g7eRHHPteeY3zFhPk9F=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF8Q0B_viNfuK5nteRbn4iOKqFDxjLpMqH9fO3esO4XMJTqjBwaoXii7pmsttc5HqSY4e7-f0pMc14XwgWozL60kr9CytO6OhPfdrAycX8I2A_Vay-wOZwrJO9EWvUK2iNZAUAM=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHUnbZ5u2thm6yq4PR2ng7Fe0hW6PGDxo7uEqZrw2kFpVR43e3Z4zWrYcDGqFiGQSsKquXTEjkmig1dyrUQ56mnuaa5WueCIr1-CMCREFoP_8l5OxeKo_6RCWwTL3lT3g8L97c1mp084zfK=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGDiIttp3TZd1xh9JcFZosHa1VkfR2KFpxwWaap6seMTjsF7FU1viQbRbNUB-T-l3dCq-vY6FPiU4tHxYIJGwM7-PuQdNJu9fwirNoMDvVGH-3RKCPRvTbtoLoykdElf0xTwi0R=s1200",
-    "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEiALSBcIBEAghoe79VZwBPq8BwP1fycPCq5aDZ5eIKNYL9b881ze7b_dDKHtKSrf_dN7HqZwlOBs7oLOeD-Hl83Q35ovlimfFfxDlcqNfTzJB4syUuXOVIofoiC24c_ttBUtmS=s1200"
-  ];
-
-  const unsplashFallbacks = [
-    "https://images.unsplash.com/photo-1545242944-e24839a62615?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=600&auto=format&fit=crop"
-  ];
-
   const galleryItems = instagramPosts.map((post, idx) => {
-    const src = mapsImages[idx % mapsImages.length];
-    const fallback = unsplashFallbacks[idx % unsplashFallbacks.length];
+    const src = galleryImageBank[idx % galleryImageBank.length];
+    const fallback = fallbackTier2;
     
     let span = "row-span-1 col-span-1";
     if (idx % 7 === 1) {
